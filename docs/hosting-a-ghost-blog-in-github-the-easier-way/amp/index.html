@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+    <meta charset="utf-8">
+
+    <title>Hosting a Ghost Blog in GitHub - the easier way</title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="../index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Test Ghost Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Hosting a Ghost Blog in GitHub - the easier way" />
+    <meta property="og:description" content="When I was planning the reboot of my website, I seriously considered using Ghost. In the end I decided to use Hugo, but in the process discovered that it is possible to host a statically-generated Ghost website using GitHub Pages." />
+    <meta property="og:url" content="http://localhost:2368/hosting-a-ghost-blog-in-github-the-easier-way/" />
+    <meta property="og:image" content="http://localhost:2368/content/images/2017/08/ghost-plus-github.png" />
+    <meta property="article:published_time" content="2017-08-25T08:57:23.000Z" />
+    <meta property="article:modified_time" content="2017-08-25T09:02:06.000Z" />
+    <meta property="article:tag" content="howto" />
+    <meta property="article:tag" content="ghost" />
+    <meta property="article:tag" content="github" />
+    <meta property="article:tag" content="blogging" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hosting a Ghost Blog in GitHub - the easier way" />
+    <meta name="twitter:description" content="When I was planning the reboot of my website, I seriously considered using Ghost. In the end I decided to use Hugo, but in the process discovered that it is possible to host a statically-generated Ghost website using GitHub Pages." />
+    <meta name="twitter:url" content="http://localhost:2368/hosting-a-ghost-blog-in-github-the-easier-way/" />
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2017/08/ghost-plus-github.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Diego Zamboni" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="howto, ghost, github, blogging" />
+    <meta property="og:image:width" content="358" />
+    <meta property="og:image:height" content="358" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Test Ghost Blog",
+        "logo": "https://casper.ghost.org/v1.0.0/images/ghost-logo.svg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Diego Zamboni",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/b148c845dea67e46337564f33023fe12?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/diego/",
+        "sameAs": []
+    },
+    "headline": "Hosting a Ghost Blog in GitHub - the easier way",
+    "url": "http://localhost:2368/hosting-a-ghost-blog-in-github-the-easier-way/",
+    "datePublished": "2017-08-25T08:57:23.000Z",
+    "dateModified": "2017-08-25T09:02:06.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:2368/content/images/2017/08/ghost-plus-github.png",
+        "width": 358,
+        "height": 358
+    },
+    "keywords": "howto, ghost, github, blogging",
+    "description": "When I was planning the reboot of my website, I seriously considered using Ghost. In the end I decided to use Hugo, but in the process discovered that it is possible to host a statically-generated Ghost website using GitHub Pages.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 1.7" />
+    <link rel="alternate" type="application/rss+xml" title="Test Ghost Blog" href="../../rss/index.html" />
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,600,400" />
+    <style amp-custom>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{margin:0.67em 0;font-size:2em}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{position:relative;vertical-align:baseline;font-size:75%;line-height:0}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}amp-img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{margin:0;color:inherit;font:inherit}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{margin:0 2px;padding:0.35em 0.625em 0.75em;border:1px solid #c0c0c0}legend{padding:0;border:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}html{max-height:100%;height:100%;font-size:62.5%;-webkit-tap-highlight-color:rgba(0, 0, 0, 0)}body{max-height:100%;height:100%;color:#3a4145;background:#f4f8fb;letter-spacing:0.01rem;font-family:"Merriweather", serif;font-size:1.8rem;line-height:1.75em;text-rendering:geometricPrecision;-webkit-font-feature-settings:"kern" 1;-moz-font-feature-settings:"kern" 1;-o-font-feature-settings:"kern" 1}::-moz-selection{background:#d6edff}::selection{background:#d6edff}h1,h2,h3,h4,h5,h6{margin:0 0 0.3em 0;color:#2e2e2e;font-family:"Open Sans", sans-serif;line-height:1.15em;text-rendering:geometricPrecision;-webkit-font-feature-settings:"dlig" 1, "liga" 1, "lnum" 1, "kern" 1;-moz-font-feature-settings:"dlig" 1, "liga" 1, "lnum" 1, "kern" 1;-o-font-feature-settings:"dlig" 1, "liga" 1, "lnum" 1, "kern" 1}h1{text-indent:-2px;letter-spacing:-1px;font-size:2.6rem}h2{letter-spacing:0;font-size:2.4rem}h3{letter-spacing:-0.6px;font-size:2.1rem}h4{font-size:1.9rem}h5{font-size:1.8rem}h6{font-size:1.8rem}a{color:#4a4a4a}a:hover{color:#111}p,ul,ol,dl{margin:0 0 2.5rem 0;font-size:1.5rem;text-rendering:geometricPrecision;-webkit-font-feature-settings:"liga" 1, "onum" 1, "kern" 1;-moz-font-feature-settings:"liga" 1, "onum" 1, "kern" 1;-o-font-feature-settings:"liga" 1, "onum" 1, "kern" 1}ol,ul{padding-left:2em}ol ol,ul ul,ul ol,ol ul{margin:0 0 0.4em 0;padding-left:2em}dl dt{float:left;clear:left;overflow:hidden;margin-bottom:1em;width:180px;text-align:right;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-bottom:1em;margin-left:200px}li{margin:0.4em 0}li li{margin:0}hr{display:block;margin:1.75em 0;padding:0;height:1px;border:0;border-top:#efefef 1px solid}blockquote{box-sizing:border-box;margin:1.75em 0 1.75em 0;padding:0 0 0 1.75em;border-left:#4a4a4a 0.4em solid;-moz-box-sizing:border-box}blockquote p{margin:0.8em 0;font-style:italic}blockquote small{display:inline-block;margin:0.8em 0 0.8em 1.5em;color:#ccc;font-size:0.9em}blockquote small:before{content:"\2014 \00A0"}blockquote cite{font-weight:700}blockquote cite a{font-weight:normal}mark{background-color:#fdffb6}code,tt{padding:1px 3px;border:#e3edf3 1px solid;background:#f7fafb;border-radius:2px;white-space:pre-wrap;font-family:Inconsolata, monospace, sans-serif;font-size:0.85em;font-feature-settings:"liga" 0;-webkit-font-feature-settings:"liga" 0;-moz-font-feature-settings:"liga" 0}pre{overflow:auto;box-sizing:border-box;margin:0 0 1.75em 0;padding:10px;width:100%;border:#e3edf3 1px solid;background:#f7fafb;border-radius:3px;white-space:pre;font-family:Inconsolata, monospace, sans-serif;font-size:0.9em;-moz-box-sizing:border-box}pre code,pre tt{padding:0;border:none;background:transparent;white-space:pre-wrap;font-size:inherit}kbd{display:inline-block;margin-bottom:0.4em;padding:1px 8px;border:#ccc 1px solid;background:#f4f4f4;border-radius:4px;box-shadow:0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;color:#666;text-shadow:#fff 0 1px 0;font-size:0.9em;font-weight:700}table{box-sizing:border-box;margin:1.75em 0;max-width:100%;width:100%;background-color:transparent;-moz-box-sizing:border-box}table th,table td{padding:8px;border-top:#efefef 1px solid;vertical-align:top;text-align:left;line-height:20px}table th{color:#000}table caption + thead tr:first-child th,table caption + thead tr:first-child td,table colgroup + thead tr:first-child th,table colgroup + thead tr:first-child td,table thead:first-child tr:first-child th,table thead:first-child tr:first-child td{border-top:0}table tbody + tbody{border-top:#efefef 2px solid}table table table{background-color:#fff}table tbody > tr:nth-child(odd) > td,table tbody > tr:nth-child(odd) > th{background-color:#f6f6f6}table.plain tbody > tr:nth-child(odd) > td,table.plain tbody > tr:nth-child(odd) > th{background:transparent}iframe,amp-iframe,.fluid-width-video-wrapper{display:block;margin:1.75em 0}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper amp-iframe{margin:0}textarea,select,input{margin:0 0 5px 0;padding:6px 9px;width:260px;outline:0;border:#e7eef2 1px solid;background:#fff;border-radius:4px;box-shadow:none;font-family:"Open Sans", sans-serif;font-size:1.6rem;line-height:1.4em;font-weight:100;-webkit-appearance:none}textarea{min-width:250px;min-height:80px;max-width:340px;width:100%;height:auto}input[type="text"]:focus,input[type="email"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="number"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,textarea:focus{outline:none;outline-width:0;border:#bbc7cc 1px solid;background:#fff}select{width:270px;height:30px;line-height:30px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.main-header{position:relative;display:table;overflow:hidden;box-sizing:border-box;width:100%;height:50px;background:#5ba4e5 no-repeat center center;background-size:cover;text-align:left;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}.content{background:#fff;padding-top:15px}.blog-title,.content{margin:auto;max-width:600px}.blog-title a{display:block;padding-right:16px;padding-left:16px;height:50px;color:#fff;text-decoration:none;font-family:"Open Sans", sans-serif;font-size:16px;line-height:50px;font-weight:600}.post{position:relative;margin-top:0;margin-right:16px;margin-left:16px;padding-bottom:0;max-width:100%;border-bottom:#ebf2f6 1px solid;word-wrap:break-word;font-size:0.95em;line-height:1.65em}.post-header{margin-bottom:1rem}.post-title{margin-bottom:0}.post-title a{text-decoration:none}.post-meta{display:block;margin:3px 0 0 0;color:#9eabb3;font-family:"Open Sans", sans-serif;font-size:1.3rem;line-height:2.2rem}.post-meta a{color:#9eabb3;text-decoration:none}.post-meta a:hover{text-decoration:underline}.post-meta .author{margin:0;font-size:1.3rem;line-height:1.3em}.post-date{display:inline-block;text-transform:uppercase;white-space:nowrap;font-size:1.2rem;line-height:1.2em}.post-image{margin:0;padding-top:3rem;padding-bottom:30px;border-top:1px #E8E8E8 solid}.post-content amp-img,.post-content amp-anim{position:relative;left:50%;display:block;padding:0;min-width:0;max-width:112%;width:calc(100% + 32px);height:auto;transform:translateX(-50%);-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%)}.footnotes{font-size:1.3rem;line-height:1.6em;font-style:italic}.footnotes li{margin:0.6rem 0}.footnotes p{margin:0}.footnotes p a:last-child{text-decoration:none}.site-footer{position:relative;margin:0 auto 20px auto;padding:1rem 15px;max-width:600px;color:rgba(0,0,0,0.5);font-family:"Open Sans", sans-serif;font-size:1.1rem;line-height:1.75em}.site-footer a{color:rgba(0,0,0,0.5);text-decoration:none;font-weight:bold}.site-footer a:hover{border-bottom:#bbc7cc 1px solid}.poweredby{display:block;float:right;width:45%;text-align:right}.copyright{display:block;float:left;width:45%}</style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+</head>
+
+<body class="amp-template">
+    <header class="main-header">
+        <nav class="blog-title">
+            <a href="../../index.html">Test Ghost Blog</a>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">Hosting a Ghost Blog in GitHub - the easier way</h1>
+                <section class="post-meta">
+                    <p class="author">by <a href="../../author/diego/index.html">Diego Zamboni</a></p>
+                    <time class="post-date" datetime="2017-08-25">2017-08-25</time>
+                </section>
+            </header>
+            <figure class="post-image">
+                <amp-img src="http://localhost:2368/content/images/2017/08/ghost-plus-github.png" width="600" height="400" layout="responsive"></amp-img>
+            </figure>
+            <section class="post-content">
+
+                <div class="kg-card-markdown"><p>When I was planning the reboot of my website, I seriously considered using Ghost. It has a very nice UI, beautiful and usable theme out of the box, and a very active community. Eventually I decided to use Hugo, but in the process discovered that it is possible to host a statically-generated Ghost website using GitHub Pages.</p>
+
+<h2 id="overview">Overview</h2>
+<p>The general approach, <a href="https://github.com/paladini/ghost-on-github-pages/blob/master/README.md">described</a> <a href="https://medium.com/aishik/publish-with-ghost-on-github-pages-2e5308db90ae">in</a> <a href="http://briank.im/i-see-ghosts/">multiple</a> articles I found, is the following:</p>
+<ol>
+<li>Install and run Ghost locally</li>
+<li>Edit/create your content on your local install</li>
+<li>Create a static copy of your Ghost site by scraping it off the local install.</li>
+<li>Push the static website to GitHub Pages</li>
+</ol>
+<p>So far, so good. It makes sense. But all those articles share one thing: they suggest using a tool called <a href="https://github.com/axitkhurana/buster">buster</a> which, as far as I can tell, it's a web-scraping tool, specialized for Ghost. However, it has a number of limitations–for example, it does not slurp Ghost static pages, and it hasn't been updated in a very long time (there's <a href="https://github.com/skosch/buster">a fork</a> with somewhat more recent activity).</p>
+<p>I found the use of buster puzzling, since there is a perfectly mature, functional and complete tool for scraping off a copy of a website: good old trusty <a href="https://en.wikipedia.org/wiki/Wget">wget</a>. It is included (or easily available) in most Unix/Linux distributions, it is extremely powerful, and has features that make it really easy to create a local, working copy of a website (including proper translation of URLs). I used it to create the <a href="http://briank.im/i-see-ghosts/">static archive of my old blog, BrT</a>, when I decided to retire its WordPress backend years ago.</p>
+<p>Another thing I found is that most instructions suggest storing only the generated website in your GitHub repository. I prefer keeping the source files and the generated website together. GitHub pages allows serving the website <a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">from different sources</a>, including the repo's <code>gh-pages</code> branch, its <code>master</code> branch, or the <code>/docs</code> directory in the <code>master</code> branch. Personally, I prefer using the <code>/docs</code> directory since it allows me to keep both the source and the generated website in the same place, without any branch fiddling.</p>
+<p>So, without further ado, here are the detailed instructions. I ran these on my Mac, but most of them should work equally well on Linux or any other Unix-like system.</p>
+<h2 id="installghost">Install Ghost</h2>
+<ol>
+<li>
+<p><a href="https://ghost.org/developers/">Download Ghost</a> (version 1.7.1 as of this writing):</p>
+<pre><code class="language-console">cd ~/tmp # or some other suitable place
+wget https://github.com/TryGhost/Ghost/releases/download/1.7.1/Ghost-1.7.1.zip
+</code></pre>
+</li>
+<li>
+<p>Unpack it in a suitable directory, initialize it as a GitHub repository and commit the Ghost plain install (to have a baseline with the fresh install):</p>
+<pre><code class="language-console">mkdir test-ghost-blog
+cd test-ghost-blog
+unzip ../Ghost-1.7.1.zip
+git init .
+git add .
+git commit -m 'Initial commit'
+</code></pre>
+</li>
+<li>
+<p>Install the necessary Node modules, update the git repository:</p>
+<pre><code class="language-console">npm install
+git add .
+git commit -m 'Installed Node dependencies'
+</code></pre>
+</li>
+<li>
+<p>Install <code>knex-migrator</code>, needed for the DB initialization:</p>
+<pre><code class="language-console">npm install -g knex-migrator
+</code></pre>
+</li>
+<li>
+<p>Initialize the database and start Ghost (<code>knex-migrator</code> may give a &quot;Module version mismatch&quot; message, but it seems to work OK anyway):</p>
+<pre><code class="language-console">knex-migrator
+npm start
+</code></pre>
+</li>
+<li>
+<p>Your blog is running! You can visit it at <a href="../../index.html">http://localhost:2368/</a>:<br></br>
+<amp-img src="http://localhost:2368/content/images/2017/08/ghost-initial-screen.png" alt="ghost-initial-screen" width="1868" height="1746" layout="responsive"></amp-img></p>
+</li>
+<li>
+<p>Go to <a href="../../ghost.html">http://localhost:2368/ghost</a>, create your user and set up your blog info:<br></br>
+<amp-img src="http://localhost:2368/content/images/2017/08/ghost-setup-blog.png" alt="ghost-setup-blog" width="1868" height="1570" layout="responsive"></amp-img><br></br>
+You may want to use an email address you don't mind being public. See &quot;Security Considerations&quot; below.</p>
+</li>
+<li>
+<p>Start creating content!<br></br>
+<amp-img src="http://localhost:2368/content/images/2017/08/ghost-admin-screen-1.png" alt="ghost-admin-screen-1" width="1868" height="1570" layout="responsive"></amp-img></p>
+</li>
+<li>
+<p>Update the git repository:</p>
+<pre><code class="language-console">git add .
+git commit -m 'Finished local Ghost setup'
+</code></pre>
+</li>
+</ol>
+<h2 id="exportwebsite">Export website</h2>
+<p>Now that you have your blog set up locally, we need to generate a static copy that can be published to GitHub. For this we will use the wget command. I gathered the correct options from <a href="http://www.suodatin.com/fathom/How-to-retire-a-wordpress-blog-(make-wordpress-a-static-site)">this blog post by Ilya</a> a few years ago, although it's not too hard to deduct them from the <a href="http://www.misc.cl.cam.ac.uk/cgi-bin/manpage?wget">wget man page</a>.</p>
+<ol>
+<li>
+<p>We will publish the blog from the <code>docs</code> directory of our repository, so that's where we need to store the static copy:</p>
+<pre><code class="language-console">wget -r -nH -P docs -E -T 2 -np -k http://localhost:2368/
+</code></pre>
+<p>This command will crawl the entire site and create a static copy of it under the <code>docs</code> directory. You can open the file <code>docs/index.html</code> in your web browser to verify.</p>
+</li>
+<li>
+<p>Add the generated pages to the git repository:</p>
+<pre><code class="language-console">git add docs
+git commit -m 'Initial commit of static web site'
+</code></pre>
+</li>
+</ol>
+<h2 id="pushtogithub">Push to GitHub</h2>
+<p>We can finally create our GitHub repo and push the contents to it.</p>
+<ol>
+<li>
+<p>Create the repository. I'm using here the <a href="https://hub.github.com/"><code>hub</code></a> command, but of course you can also do it by hand in the GitHub website (in this case you need to <a href="https://help.github.com/articles/adding-a-remote/">add the git remote</a> by hand as well):</p>
+<pre><code class="language-console">hub create 
+</code></pre>
+</li>
+<li>
+<p>Push the local repository to GitHub (this includes both the Ghost source and the generated website under <code>docs</code>):</p>
+<pre><code class="language-console">git push -u origin master
+</code></pre>
+</li>
+</ol>
+<h2 id="publish">Publish!</h2>
+<p>Now all we need to do is enable GitHub Pages on our repository, so that the contents under <code>docs</code> gets published.</p>
+<ol>
+<li>
+<p>Go to your repository's &quot;Settings&quot; screen:<br></br>
+<amp-img src="http://localhost:2368/content/images/2017/08/ghost-repo-settings-screen.png" alt="ghost-repo-settings-screen" width="1868" height="1570" layout="responsive"></amp-img></p>
+</li>
+<li>
+<p>Scroll down to the &quot;GitHub Pages&quot; section and choose the &quot;master branch /docs folder&quot; option and click the &quot;Save&quot; button:<br></br>
+<amp-img src="http://localhost:2368/content/images/2017/08/ghost-repo-github-pages-setting.png" alt="ghost-repo-github-pages-setting" width="1865" height="1570" layout="responsive"></amp-img></p>
+</li>
+</ol>
+<p>We are done! After a few minutes (usually takes 2-5 minutes for the contents to be published the first time, afterwards updates are nearly instantaneous), you will find your new website's content under <code>http://&lt;github-username&gt;.github.io/&lt;github-repo-name&gt;</code>. In our example, the URL is <a href="https://zzamboni.github.io/test-ghost-blog/">https://zzamboni.github.io/test-ghost-blog/</a>:</p>
+<p><amp-img src="http://localhost:2368/content/images/2017/08/ghost-published-blog.png" alt="ghost-published-blog" width="1868" height="967" layout="responsive"></amp-img></p>
+<h2 id="theworkflow">The workflow</h2>
+<p>After the initial setup, you need to follow these steps when you want to update your website:</p>
+<ol>
+<li>
+<p>Start Ghost inside your GitHub repository:</p>
+<pre><code class="language-console">npm start
+</code></pre>
+</li>
+<li>
+<p>Connect to <a href="../../index.html">http://localhost:2368/</a> and update your contents. You can also change the blog settings, themes, etc.</p>
+</li>
+<li>
+<p>Re-crawl the site to generate the local copy:</p>
+<pre><code class="language-console">wget -r -nH -P docs -E -T 2 -np -k http://localhost:2368/
+</code></pre>
+</li>
+<li>
+<p>Update and push the whole git repository:</p>
+<pre><code class="language-console">git add .
+git commit -m 'Website update'
+</code></pre>
+</li>
+</ol>
+<p>Steps 3 and 4 can be easily automated. I keep the following <a href="https://github.com/zzamboni/test-ghost-blog/blob/master/update_website.sh"><code>update_website.sh</code></a> script in the repository with the name :</p>
+<pre><code class="language-bash">#!/bin/bash
+OUTDIR=docs
+LOCAL_GHOST=&quot;http://localhost:2368/&quot;
+wget -r -nH -P $OUTDIR -E -T 2 -np -k $LOCAL_GHOST &amp;&amp; \
+git add . &amp;&amp; \
+git ci -m 'Update website' &amp;&amp;  \
+git push
+</code></pre>
+<p>Then you can just run this script from within your repository after making any changes:</p>
+<pre><code class="language-console">./update_website.sh
+</code></pre>
+<h2 id="variations">Variations</h2>
+<p>The method described above is my favorite because it allows me to keep the source data and generated pages in the same repository. However, there are other variations that you might want to use:</p>
+<ul>
+<li>
+<p>If your repository is named <code>&lt;username&gt;.github.io</code>, you cannot configure GitHub Pages to serve content from the <code>/docs</code> directory, it is automatically served from the root directory of the <code>master</code> branch. In this case you need to store only the generated pages in the repository (you could also reverse the setup: have the generated website in the root directory, and the local Ghost install under the <code>/source</code> directory).</p>
+</li>
+<li>
+<p>You can choose to serve contents from the <code>gh-pages</code> branch instead of the <code>/docs</code> directory. This allows you to keep the source and output still in the same repository. You will need to switch from one branch to the other between updating the contents and generating the static web site (you may need to keep both branches in different directories, so that your local Ghost install can still access its database in the <code>master</code> branch while you fetch it to generate the static website).</p>
+</li>
+</ul>
+<p>You can read more about the different ways to serve GitHub Pages content in the <a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">GitHub documentation</a>.</p>
+<p>And of course, you can use the same method to host your static content somewhere other than GitHub pages.</p>
+<h2 id="securityconsiderations">Security considerations</h2>
+<p>One of the most-touted benefits of a static website (also known, I discovered recently, as the <a href="https://jamstack.org/">JAMstack</a>) is security -- without server-side active components, it's much harder for a website to be compromised.</p>
+<p>Sharp-eyed readers may have noticed that with the setup described above, Ghost's entire database file gets checked into your repository. This file contains not only your published blog posts, but also your user definitions (including hashed versions of the user passwords) and draft posts.</p>
+<p>The local Ghost install uses a SQLite database, stored at <code>content/data/ghost-dev.db</code>, which you can query using the <code>sqlite3</code> command. For example, to see the user definitions:</p>
+<pre><code class="language-console">sqlite3 content/data/ghost-dev.db 'select * from users'
+</code></pre>
+<p>While this seems scandalous, keep in mind that the active Ghost installation is only running locally on your machine, and is not accessible to anyone from the outside, even when it is running (the server is only bound to <code>localhost</code>). Still, you may want to keep in mind:</p>
+<ul>
+<li>Your name and email address are accessible. Your name is visible in any posts you write, but you may want to set your email address to one you don't mind being public.</li>
+<li>Don't use a password that you also use in any other place (<strong>this is a good security recommendation in general</strong>). The password is hashed, but this prevents the password from being useful even if someone manages to figure it out.</li>
+<li>If you share your machine with others, keep in mind that any other local users <strong>will</strong> be able to access your local Ghost install as long as it's running. If you don't trust those users, make sure you set a good password and shut it down when you are not using it.</li>
+<li>If you are really worried, add <code>content/data/ghost-dev.db</code> to your <code>.gitignore</code> file so it does not get checked into the repository. Make sure you make a backup of it separately so you can recover your blog in case of local data loss.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>I followed the steps described above to create a test Ghost install, which you can access at <a href="https://zzamboni.github.io/test-ghost-blog/">https://zzamboni.github.io/test-ghost-blog/</a>, and its corresponding GitHub repository at <a href="https://github.com/zzamboni/test-ghost-blog/">https://github.com/zzamboni/test-ghost-blog/</a>. You can also find this article published there.</p>
+<p>I hope you've found it useful. I'd love to hear your comments!</p>
+</div>
+
+            </section>
+
+        </article>
+    </main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="../../index.html">Test Ghost Blog</a> &copy; 2017</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+</body>
+</html>

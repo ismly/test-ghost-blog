@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Hosting a Ghost Blog in GitHub - the easier way</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css%3Fv=a4bda3f313.css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="amp/index.html" />
+    
+    <meta property="og:site_name" content="Test Ghost Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Hosting a Ghost Blog in GitHub - the easier way" />
+    <meta property="og:description" content="When I was planning the reboot of my website, I seriously considered using Ghost. In the end I decided to use Hugo, but in the process discovered that it is possible to host a statically-generated Ghost website using GitHub Pages." />
+    <meta property="og:url" content="http://localhost:2368/hosting-a-ghost-blog-in-github-the-easier-way/" />
+    <meta property="og:image" content="http://localhost:2368/content/images/2017/08/ghost-plus-github.png" />
+    <meta property="article:published_time" content="2017-08-25T08:57:23.000Z" />
+    <meta property="article:modified_time" content="2017-08-25T09:02:06.000Z" />
+    <meta property="article:tag" content="howto" />
+    <meta property="article:tag" content="ghost" />
+    <meta property="article:tag" content="github" />
+    <meta property="article:tag" content="blogging" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hosting a Ghost Blog in GitHub - the easier way" />
+    <meta name="twitter:description" content="When I was planning the reboot of my website, I seriously considered using Ghost. In the end I decided to use Hugo, but in the process discovered that it is possible to host a statically-generated Ghost website using GitHub Pages." />
+    <meta name="twitter:url" content="http://localhost:2368/hosting-a-ghost-blog-in-github-the-easier-way/" />
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2017/08/ghost-plus-github.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Diego Zamboni" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="howto, ghost, github, blogging" />
+    <meta property="og:image:width" content="358" />
+    <meta property="og:image:height" content="358" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Test Ghost Blog",
+        "logo": "https://casper.ghost.org/v1.0.0/images/ghost-logo.svg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Diego Zamboni",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/b148c845dea67e46337564f33023fe12?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/diego/",
+        "sameAs": []
+    },
+    "headline": "Hosting a Ghost Blog in GitHub - the easier way",
+    "url": "http://localhost:2368/hosting-a-ghost-blog-in-github-the-easier-way/",
+    "datePublished": "2017-08-25T08:57:23.000Z",
+    "dateModified": "2017-08-25T09:02:06.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:2368/content/images/2017/08/ghost-plus-github.png",
+        "width": 358,
+        "height": 358
+    },
+    "keywords": "howto, ghost, github, blogging",
+    "description": "When I was planning the reboot of my website, I seriously considered using Ghost. In the end I decided to use Hugo, but in the process discovered that it is possible to host a statically-generated Ghost website using GitHub Pages.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <script type="text/javascript" src="../public/ghost-sdk.js%3Fv=a4bda3f313"></script>
+<script type="text/javascript">
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "6ee14f47be37"
+});
+</script>
+    <meta name="generator" content="Ghost 1.7" />
+    <link rel="alternate" type="application/rss+xml" title="Test Ghost Blog" href="../rss/index.html" />
+
+</head>
+<body class="post-template tag-howto tag-ghost-tag tag-github tag-blogging">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="../index.html"><img src="https://casper.ghost.org/v1.0.0/images/ghost-logo.svg" alt="Test Ghost Blog" /></a>
+            <ul class="nav">
+    <li class="nav-home" role="presentation"><a href="../index.html">Home</a></li>
+</ul>
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+        </div>
+            <a class="rss-button" href="http://cloud.feedly.com/#subscription/feed/http://localhost:2368/rss/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-howto tag-ghost-tag tag-github tag-blogging ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2017-08-25">25 August 2017</time>
+                        <span class="date-divider">/</span> <a href="../tag/howto/index.html">howto</a>
+                </section>
+                <h1 class="post-full-title">Hosting a Ghost Blog in GitHub - the easier way</h1>
+            </header>
+
+            <figure class="post-full-image" style="background-image: url(../content/images/2017/08/ghost-plus-github.png)">
+            </figure>
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown"><p>When I was planning the reboot of my website, I seriously considered using Ghost. It has a very nice UI, beautiful and usable theme out of the box, and a very active community. Eventually I decided to use Hugo, but in the process discovered that it is possible to host a statically-generated Ghost website using GitHub Pages.</p>
+<!--more-->
+<h2 id="overview">Overview</h2>
+<p>The general approach, <a href="https://github.com/paladini/ghost-on-github-pages/blob/master/README.md">described</a> <a href="https://medium.com/aishik/publish-with-ghost-on-github-pages-2e5308db90ae">in</a> <a href="http://briank.im/i-see-ghosts/">multiple</a> articles I found, is the following:</p>
+<ol>
+<li>Install and run Ghost locally</li>
+<li>Edit/create your content on your local install</li>
+<li>Create a static copy of your Ghost site by scraping it off the local install.</li>
+<li>Push the static website to GitHub Pages</li>
+</ol>
+<p>So far, so good. It makes sense. But all those articles share one thing: they suggest using a tool called <a href="https://github.com/axitkhurana/buster">buster</a> which, as far as I can tell, it's a web-scraping tool, specialized for Ghost. However, it has a number of limitations–for example, it does not slurp Ghost static pages, and it hasn't been updated in a very long time (there's <a href="https://github.com/skosch/buster">a fork</a> with somewhat more recent activity).</p>
+<p>I found the use of buster puzzling, since there is a perfectly mature, functional and complete tool for scraping off a copy of a website: good old trusty <a href="https://en.wikipedia.org/wiki/Wget">wget</a>. It is included (or easily available) in most Unix/Linux distributions, it is extremely powerful, and has features that make it really easy to create a local, working copy of a website (including proper translation of URLs). I used it to create the <a href="http://briank.im/i-see-ghosts/">static archive of my old blog, BrT</a>, when I decided to retire its WordPress backend years ago.</p>
+<p>Another thing I found is that most instructions suggest storing only the generated website in your GitHub repository. I prefer keeping the source files and the generated website together. GitHub pages allows serving the website <a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">from different sources</a>, including the repo's <code>gh-pages</code> branch, its <code>master</code> branch, or the <code>/docs</code> directory in the <code>master</code> branch. Personally, I prefer using the <code>/docs</code> directory since it allows me to keep both the source and the generated website in the same place, without any branch fiddling.</p>
+<p>So, without further ado, here are the detailed instructions. I ran these on my Mac, but most of them should work equally well on Linux or any other Unix-like system.</p>
+<h2 id="installghost">Install Ghost</h2>
+<ol>
+<li>
+<p><a href="https://ghost.org/developers/">Download Ghost</a> (version 1.7.1 as of this writing):</p>
+<pre><code class="language-console">cd ~/tmp # or some other suitable place
+wget https://github.com/TryGhost/Ghost/releases/download/1.7.1/Ghost-1.7.1.zip
+</code></pre>
+</li>
+<li>
+<p>Unpack it in a suitable directory, initialize it as a GitHub repository and commit the Ghost plain install (to have a baseline with the fresh install):</p>
+<pre><code class="language-console">mkdir test-ghost-blog
+cd test-ghost-blog
+unzip ../Ghost-1.7.1.zip
+git init .
+git add .
+git commit -m 'Initial commit'
+</code></pre>
+</li>
+<li>
+<p>Install the necessary Node modules, update the git repository:</p>
+<pre><code class="language-console">npm install
+git add .
+git commit -m 'Installed Node dependencies'
+</code></pre>
+</li>
+<li>
+<p>Install <code>knex-migrator</code>, needed for the DB initialization:</p>
+<pre><code class="language-console">npm install -g knex-migrator
+</code></pre>
+</li>
+<li>
+<p>Initialize the database and start Ghost (<code>knex-migrator</code> may give a &quot;Module version mismatch&quot; message, but it seems to work OK anyway):</p>
+<pre><code class="language-console">knex-migrator
+npm start
+</code></pre>
+</li>
+<li>
+<p>Your blog is running! You can visit it at <a href="../index.html">http://localhost:2368/</a>:<br>
+<img src="../content/images/2017/08/ghost-initial-screen.png" alt="ghost-initial-screen"></p>
+</li>
+<li>
+<p>Go to <a href="../ghost.html">http://localhost:2368/ghost</a>, create your user and set up your blog info:<br>
+<img src="../content/images/2017/08/ghost-setup-blog.png" alt="ghost-setup-blog"><br>
+You may want to use an email address you don't mind being public. See &quot;Security Considerations&quot; below.</p>
+</li>
+<li>
+<p>Start creating content!<br>
+<img src="../content/images/2017/08/ghost-admin-screen-1.png" alt="ghost-admin-screen-1"></p>
+</li>
+<li>
+<p>Update the git repository:</p>
+<pre><code class="language-console">git add .
+git commit -m 'Finished local Ghost setup'
+</code></pre>
+</li>
+</ol>
+<h2 id="exportwebsite">Export website</h2>
+<p>Now that you have your blog set up locally, we need to generate a static copy that can be published to GitHub. For this we will use the wget command. I gathered the correct options from <a href="http://www.suodatin.com/fathom/How-to-retire-a-wordpress-blog-(make-wordpress-a-static-site)">this blog post by Ilya</a> a few years ago, although it's not too hard to deduct them from the <a href="http://www.misc.cl.cam.ac.uk/cgi-bin/manpage?wget">wget man page</a>.</p>
+<ol>
+<li>
+<p>We will publish the blog from the <code>docs</code> directory of our repository, so that's where we need to store the static copy:</p>
+<pre><code class="language-console">wget -r -nH -P docs -E -T 2 -np -k http://localhost:2368/
+</code></pre>
+<p>This command will crawl the entire site and create a static copy of it under the <code>docs</code> directory. You can open the file <code>docs/index.html</code> in your web browser to verify.</p>
+</li>
+<li>
+<p>Add the generated pages to the git repository:</p>
+<pre><code class="language-console">git add docs
+git commit -m 'Initial commit of static web site'
+</code></pre>
+</li>
+</ol>
+<h2 id="pushtogithub">Push to GitHub</h2>
+<p>We can finally create our GitHub repo and push the contents to it.</p>
+<ol>
+<li>
+<p>Create the repository. I'm using here the <a href="https://hub.github.com/"><code>hub</code></a> command, but of course you can also do it by hand in the GitHub website (in this case you need to <a href="https://help.github.com/articles/adding-a-remote/">add the git remote</a> by hand as well):</p>
+<pre><code class="language-console">hub create 
+</code></pre>
+</li>
+<li>
+<p>Push the local repository to GitHub (this includes both the Ghost source and the generated website under <code>docs</code>):</p>
+<pre><code class="language-console">git push -u origin master
+</code></pre>
+</li>
+</ol>
+<h2 id="publish">Publish!</h2>
+<p>Now all we need to do is enable GitHub Pages on our repository, so that the contents under <code>docs</code> gets published.</p>
+<ol>
+<li>
+<p>Go to your repository's &quot;Settings&quot; screen:<br>
+<img src="../content/images/2017/08/ghost-repo-settings-screen.png" alt="ghost-repo-settings-screen"></p>
+</li>
+<li>
+<p>Scroll down to the &quot;GitHub Pages&quot; section and choose the &quot;master branch /docs folder&quot; option and click the &quot;Save&quot; button:<br>
+<img src="../content/images/2017/08/ghost-repo-github-pages-setting.png" alt="ghost-repo-github-pages-setting"></p>
+</li>
+</ol>
+<p>We are done! After a few minutes (usually takes 2-5 minutes for the contents to be published the first time, afterwards updates are nearly instantaneous), you will find your new website's content under <code>http://&lt;github-username&gt;.github.io/&lt;github-repo-name&gt;</code>. In our example, the URL is <a href="https://zzamboni.github.io/test-ghost-blog/">https://zzamboni.github.io/test-ghost-blog/</a>:</p>
+<p><img src="../content/images/2017/08/ghost-published-blog.png" alt="ghost-published-blog"></p>
+<h2 id="theworkflow">The workflow</h2>
+<p>After the initial setup, you need to follow these steps when you want to update your website:</p>
+<ol>
+<li>
+<p>Start Ghost inside your GitHub repository:</p>
+<pre><code class="language-console">npm start
+</code></pre>
+</li>
+<li>
+<p>Connect to <a href="../index.html">http://localhost:2368/</a> and update your contents. You can also change the blog settings, themes, etc.</p>
+</li>
+<li>
+<p>Re-crawl the site to generate the local copy:</p>
+<pre><code class="language-console">wget -r -nH -P docs -E -T 2 -np -k http://localhost:2368/
+</code></pre>
+</li>
+<li>
+<p>Update and push the whole git repository:</p>
+<pre><code class="language-console">git add .
+git commit -m 'Website update'
+</code></pre>
+</li>
+</ol>
+<p>Steps 3 and 4 can be easily automated. I keep the following <a href="https://github.com/zzamboni/test-ghost-blog/blob/master/update_website.sh"><code>update_website.sh</code></a> script in the repository with the name :</p>
+<pre><code class="language-bash">#!/bin/bash
+OUTDIR=docs
+LOCAL_GHOST=&quot;http://localhost:2368/&quot;
+wget -r -nH -P $OUTDIR -E -T 2 -np -k $LOCAL_GHOST &amp;&amp; \
+git add . &amp;&amp; \
+git ci -m 'Update website' &amp;&amp;  \
+git push
+</code></pre>
+<p>Then you can just run this script from within your repository after making any changes:</p>
+<pre><code class="language-console">./update_website.sh
+</code></pre>
+<h2 id="variations">Variations</h2>
+<p>The method described above is my favorite because it allows me to keep the source data and generated pages in the same repository. However, there are other variations that you might want to use:</p>
+<ul>
+<li>
+<p>If your repository is named <code>&lt;username&gt;.github.io</code>, you cannot configure GitHub Pages to serve content from the <code>/docs</code> directory, it is automatically served from the root directory of the <code>master</code> branch. In this case you need to store only the generated pages in the repository (you could also reverse the setup: have the generated website in the root directory, and the local Ghost install under the <code>/source</code> directory).</p>
+</li>
+<li>
+<p>You can choose to serve contents from the <code>gh-pages</code> branch instead of the <code>/docs</code> directory. This allows you to keep the source and output still in the same repository. You will need to switch from one branch to the other between updating the contents and generating the static web site (you may need to keep both branches in different directories, so that your local Ghost install can still access its database in the <code>master</code> branch while you fetch it to generate the static website).</p>
+</li>
+</ul>
+<p>You can read more about the different ways to serve GitHub Pages content in the <a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">GitHub documentation</a>.</p>
+<p>And of course, you can use the same method to host your static content somewhere other than GitHub pages.</p>
+<h2 id="securityconsiderations">Security considerations</h2>
+<p>One of the most-touted benefits of a static website (also known, I discovered recently, as the <a href="https://jamstack.org/">JAMstack</a>) is security -- without server-side active components, it's much harder for a website to be compromised.</p>
+<p>Sharp-eyed readers may have noticed that with the setup described above, Ghost's entire database file gets checked into your repository. This file contains not only your published blog posts, but also your user definitions (including hashed versions of the user passwords) and draft posts.</p>
+<p>The local Ghost install uses a SQLite database, stored at <code>content/data/ghost-dev.db</code>, which you can query using the <code>sqlite3</code> command. For example, to see the user definitions:</p>
+<pre><code class="language-console">sqlite3 content/data/ghost-dev.db 'select * from users'
+</code></pre>
+<p>While this seems scandalous, keep in mind that the active Ghost installation is only running locally on your machine, and is not accessible to anyone from the outside, even when it is running (the server is only bound to <code>localhost</code>). Still, you may want to keep in mind:</p>
+<ul>
+<li>Your name and email address are accessible. Your name is visible in any posts you write, but you may want to set your email address to one you don't mind being public.</li>
+<li>Don't use a password that you also use in any other place (<strong>this is a good security recommendation in general</strong>). The password is hashed, but this prevents the password from being useful even if someone manages to figure it out.</li>
+<li>If you share your machine with others, keep in mind that any other local users <strong>will</strong> be able to access your local Ghost install as long as it's running. If you don't trust those users, make sure you set a good password and shut it down when you are not using it.</li>
+<li>If you are really worried, add <code>content/data/ghost-dev.db</code> to your <code>.gitignore</code> file so it does not get checked into the repository. Make sure you make a backup of it separately so you can recover your blog in case of local data loss.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>I followed the steps described above to create a test Ghost install, which you can access at <a href="https://zzamboni.github.io/test-ghost-blog/">https://zzamboni.github.io/test-ghost-blog/</a>, and its corresponding GitHub repository at <a href="https://github.com/zzamboni/test-ghost-blog/">https://github.com/zzamboni/test-ghost-blog/</a>. You can also find this article published there.</p>
+<p>I hope you've found it useful. I'd love to hear your comments!</p>
+</div>
+            </section>
+
+
+            <footer class="post-full-footer">
+
+                <section class="author-card">
+                        <img class="author-profile-image" src="http://www.gravatar.com/avatar/b148c845dea67e46337564f33023fe12?s=250&amp;d=mm&amp;r=x" alt="Diego Zamboni" />
+                    <section class="author-card-content">
+                        <h4 class="author-card-name"><a href="../author/diego/index.html">Diego Zamboni</a></h4>
+                            <p>Read <a href="../author/diego/index.html">more posts</a> by this author.</p>
+                    </section>
+                </section>
+                <div class="post-full-footer-right">
+                    <a class="author-card-button" href="../author/diego/index.html">Read More</a>
+                </div>
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+
+
+
+                <article class="post-card post tag-getting-started">
+        <a class="post-card-image-link" href="../welcome/index.html">
+            <div class="post-card-image" style="background-image: url(https://casper.ghost.org/v1.0.0/images/welcome.jpg)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../welcome/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">Getting Started</span>
+                <h2 class="post-card-title">Welcome to Ghost</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>Hey! Welcome to Ghost, it's great to have you :) We know that first impressions are important, so we've populated your new site with some initial Getting Started posts that will help you get</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+            <span class="post-card-author"><a href="../author/ghost/index.html">Ghost</a></span>
+        </footer>
+    </div>
+</article>
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="../index.html">
+            <span>Test Ghost Blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Hosting a Ghost Blog in GitHub - the easier way</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Hosting%20a%20Ghost%20Blog%20in%20GitHub%20-%20the%20easier%20way&amp;url=http://localhost:2368/hosting-a-ghost-blog-in-github-the-easier-way/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/hosting-a-ghost-blog-in-github-the-easier-way/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="../index.html">Test Ghost Blog</a> &copy; 2017</section>
+                <nav class="site-footer-nav">
+                    <a href="../index.html">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js%3Fv=a4bda3f313"></script>
+
+
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+
+    
+
+</body>
+</html>
